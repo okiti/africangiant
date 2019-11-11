@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Yeon+Sung&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -10,12 +10,11 @@
 }
 *:before, *:after {
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
 }
 body{
   position: relative;
   font-size: 16px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   color: #FFF;
   width: 100%;

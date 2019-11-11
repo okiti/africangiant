@@ -1,8 +1,8 @@
 body {
     background: url('../img/pattern0.jpg');
     width: 100%;
-    overflow-x: hidden;
-    min-height: 100vh;
+    overflow: hidden;
+    height: 100vh;
 }
 .highlight-text {
     font-size: 40px;
@@ -14,11 +14,13 @@ body {
     padding: 20px;
     margin: 20px 9px;
     min-width: 300px;
+    min-height: 80vh;
     border-radius: 7px;
 }
 .cover-art {
     width: 200px;
     height: 200px;
+    margin-top: 8px;
     border-radius: 7px;
     object-fit: cover;
 }
@@ -99,4 +101,10 @@ body {
       box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
     }
 }
+@media only screen and (max-width: 720px) {
+    .container {
+        width: 90%;
+        border-radius: 7px;
+    }
+  }
   
