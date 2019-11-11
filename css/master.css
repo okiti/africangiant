@@ -1,0 +1,102 @@
+body {
+    background: url('../img/pattern0.jpg');
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+.highlight-text {
+    font-size: 40px;
+    font-family: 'Yeon Sung', cursive;
+}
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    padding: 20px;
+    margin: 20px 9px;
+    min-width: 300px;
+    border-radius: 7px;
+}
+.cover-art {
+    width: 200px;
+    height: 200px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+.play-control-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    width: 50px; height: 50px;
+    margin: 3px 9px;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    margin-top: 25px;
+}
+.play-control-holder > img {
+    margin: 0;
+}
+.play-control-holder.playing::before {
+    -moz-animation: audio1 1.5s infinite ease-in-out;
+    -o-animation: audio1 1.5s infinite ease-in-out;
+    -webkit-animation: audio1 1.5s infinite ease-in-out;
+    animation: audio1 1.5s infinite ease-in-out;
+}
+.play-control-holder.playing::after {
+    -moz-animation: audio2 2.2s infinite ease-in-out;
+    -o-animation: audio2 2.2s infinite ease-in-out;
+    -webkit-animation: audio2 2.2s infinite ease-in-out;
+    animation: audio2 2.2s infinite ease-in-out;
+}
+.play-control-holder.playing::before,
+.play-control-holder.playing::after {
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  border-radius: 1000px;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 50px;
+  right: 0;
+  top: 0;
+  width: 50px;
+  z-index: 0;
+}
+.play-control-holder.playing::before {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+  }
+@keyframes audio1 {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+    }
+    25% {
+      box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.55);
+    }
+    75% {
+      box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.25);
+    }
+}
+@keyframes audio2 {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.15);
+    }
+    25% {
+      box-shadow: 0 0 0 0.4em rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 0 0.15em rgba(255, 255, 255, 0.05);
+    }
+    75% {
+      box-shadow: 0 0 0 0.55em rgba(255, 255, 255, 0.45);
+    }
+}
+  
